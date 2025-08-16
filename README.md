@@ -36,15 +36,14 @@
   
   <h3>Received Chain</h3>
   <p>
-    The <code>Received:</code> fields tell the real journey of the email. 
-    While the visible sender claimed to be Trust Wallet, the hops showed delivery 
-    through an unrelated domain/server: <strong>fastresponseplumbingsf.com</strong>. 
-    This mismatch is a strong indicator of fraud.
+  <li>  Zendesk origin: zendesk.com → mta-out15.pod28.euc1.zdsys.com</li>
+  <li>  Outbound IP: 188.172.138.40 (verified via SPF as alquiaga.com) </li>
+ <li> Microsoft relays: DB1PEPF000509E4.mail.protection.outlook.com → DU2PR04CA0054.outlook.office365.com → CY5PR20MB4867.namprd20.prod.outlook.com → final mailbox delivery. </li> 
   </p>
 
   <h3>Authentication Results</h3>
   <ul>
-    <li><strong>SPF:</strong> SoftFail (alignment issue, sender IP not fully authorized)</li>
+    <li><strong>SPF:</strong> Pass (alignment issue, sender IP not fully authorized)</li>
     <li><strong>DKIM:</strong> Pass (but domain alignment questionable)</li>
     <li><strong>DMARC:</strong> Not aligned (failed to enforce policy)</li>
     <li><strong>ARC:</strong> No ARC headers present</li>
